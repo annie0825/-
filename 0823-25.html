@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃家家族趣旅行 - 旅遊手冊</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #FAF6EE;
+            --card-bg: #FFFFFF;
+            --primary-color: #4A6B53; /* 森林深綠 */
+            --primary-light: #EBF2ED;
+            --accent-orange: #D97353; /* 溫暖橘紅 */
+            --accent-yellow: #E6A15C;
+            --text-dark: #3A3027;
+            --text-muted: #6B5E52;
+            --border-color: #E2D7C3;
+            --shadow-sm: 0 4px 12px rgba(78, 60, 45, 0.06);
+            --shadow-md: 0 8px 24px rgba(78, 60, 45, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+            background-color: #EFE9DE;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* 手冊外觀規格 */
+        .handbook-wrapper {
+            max-width: 960px;
+            margin: 30px auto;
+            background: var(--bg-color);
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            border: 3px solid #E6DCB8;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 頁首 Header */
+        .cover-header {
+            background: linear-gradient(135deg, #3A5243 0%, #4A6B53 100%);
+            color: #FFFFFF;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 6px solid var(--accent-orange);
+        }
+
+        .cover-header h1 {
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .cover-header .sub-title {
+            font-size: 20px;
+            color: #E8D9C5;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .cover-header .date-badge {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: #FFF;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* 導覽頁籤 Nav */
+        .nav-tabs {
+            display: flex;
+            background: #EFE6D5;
+            border-bottom: 2px solid var(--border-color);
+            overflow-x: auto;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-tab {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .nav-tab.active {
+            color: var(--primary-color);
+            background: var(--bg-color);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .nav-tab:hover:not(.active) {
+            background: rgba(255,255,255,0.4);
+            color: var(--text-dark);
+        }
+
+        /* 內容區塊 Block */
+        .tab-content {
+            display: none;
+            padding: 35px 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 26px;
+            color: var(--primary-color);
+            border-bottom: 2px dashed var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--accent-orange);
+        }
+
+        /* 集合資訊卡片 */
+        .assembly-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .assembly-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .assembly-card h3 {
+            font-size: 20px;
+            color: var(--accent-orange);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .gps-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #F4EBE1;
+            color: #7A5230;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 8px;
+            border: 1px solid #D6C5AC;
+        }
+
+        .gps-link:hover {
+            background: #E8DBCB;
+        }
+
+        /* 時間軸 Timeline */
+        .day-timeline {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 40px;
+        }
+
+        .day-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 10px;
+            bottom: 10px;
+            width: 4px;
+            background: #D8CEBD;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 18px 22px;
+            border: 1.5px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 22px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-orange);
+            border: 3px solid var(--bg-color);
+            box-shadow: 0 0 0 2px var(--accent-orange);
+        }
+
+        .timeline-time {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .timeline-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* 景點網格 Grid */
+        .spot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .spot-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spot-card-header {
+            background: #F5EBE0;
+            padding: 14px 18px;
+            border-bottom: 1.5px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .spot-card-header h3 {
+            font-size: 19px;
+            color: var(--primary-color);
+        }
+
+        .spot-card-body {
+            padding: 18px;
+            font-size: 15px;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+
+        /* 遊覽車座位表 Bus Seating */
+        .bus-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .bus-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .bus-header {
+            text-align: center;
+            background: var(--primary-light);
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #C8DEC3;
+        }
+
+        .bus-header h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .bus-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .bus-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .bus-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 20px 1fr 1fr;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .bus-aisle {
+            text-align: center;
+            font-size: 12px;
+            color: #BBB;
+        }
+
+        .seat {
+            background: #FAF6EE;
+            border: 1px solid #D8CEBD;
+            border-radius: 8px;
+            padding: 8px 4px;
+            text-align: center;
+            font-size: 13px;
+            min-height: 52px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .seat.empty {
+            background: #F5F5F5;
+            border-style: dashed;
+            color: #AAA;
+        }
+
+        .seat.driver {
+            background: #FFE8E0;
+            border-color: #F0B3A1;
+            color: #C0392B;
+            font-weight: 700;
+        }
+
+        .seat.door {
+            background: #FFEAE6;
+            border-color: #F0B3A1;
+            color: #C0392B;
+            font-weight: 500;
+        }
+
+        .seat-no {
+            font-size: 10px;
+            color: #888;
+            margin-bottom: 2px;
+        }
+
+        .seat-name {
+            font-weight: 700;
+            color: #333;
+            word-break: break-all;
+        }
+
+        /* 注意事項列表 */
+        .notice-list {
+            list-style: none;
+        }
+
+        .notice-item {
+            display: flex;
+            gap: 15px;
+            background: var(--card-bg);
+            border: 1.5px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 14px;
+            margin-bottom: 14px;
+            align-items: flex-start;
+        }
+
+        .notice-icon {
+            background: #FEEFEA;
+            color: var(--accent-orange);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .notice-content h4 {
+            font-size: 17px;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .notice-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* 列印按鈕 */
+        .print-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.25);
+            color: #FFF;
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* 響應式 Layout */
+        @media (max-width: 768px) {
+            .handbook-wrapper {
+                margin: 0;
+                border-radius: 0;
+                border: none;
+            }
+
+            .assembly-box, .bus-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cover-header h1 {
+                font-size: 28px;
+            }
+
+            .tab-content {
+                padding: 20px 16px;
+            }
+        }
+
+        /* 列印樣式優化 */
+        @media print {
+            body {
+                background: #FFF;
+            }
+            .handbook-wrapper {
+                border: none;
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+            }
+            .nav-tabs, .print-btn {
+                display: none !important;
+            }
+            .tab-content {
+                display: block !important;
+                page-break-after: always;
+            }
+            .tab-content:last-child {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="handbook-wrapper">
+    <!-- 頁首 Cover Header -->
+    <header class="cover-header">
+        <button class="print-btn" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> 列印手冊
+        </button>
+        <h1><i class="fa-solid fa-heart" style="color: #FF8A65;"></i> 黃家家族趣旅行</h1>
+        <div class="sub-title">慢遊老街 ‧ 漫步巨木 ‧ 悠賞莊園 ‧ 滿載溫馨</div>
+        <div class="date-badge"><i class="fa-regular fa-calendar-days"></i> 2026.08.23 (日) - 08.25 (二)</div>
+    </header>
+
+    <!-- 頁籤 Navigation -->
+    <nav class="nav-tabs">
+        <button class="nav-tab active" onclick="openTab('tab-overview')">
+            <i class="fa-solid fa-compass"></i> 行程總覽
+        </button>
+        <button class="nav-tab" onclick="openTab('tab-itinerary')">
+            <i class="fa-solid fa-list-check"></i> 每日詳細行程
+        </button>
+        <button class="nav-tab" onclick="openTab('tab-spots')">
+            <i class="fa-solid fa-map-location-dot"></i> 景點介紹
+        </button>
+        <button class="nav-tab" onclick="openTab('tab-bus')">
+            <i class="fa-solid fa-bus"></i> 遊覽車座位
+        </button>
+        <button class="nav-tab" onclick="openTab('tab-notices')">
+            <i class="fa-solid fa-triangle-exclamation"></i> 貼心提醒
+        </button>
+    </nav>
+
+    <!-- Tab 1: 行程總覽 & 集合資訊 -->
+    <div id="tab-overview" class="tab-content active">
+        <h2 class="section-title"><i class="fa-solid fa-flag"></i> 集合資訊與出發資訊</h2>
+        <div class="assembly-box">
+            <div class="assembly-card">
+                <h3><i class="fa-solid fa-bus-simple"></i> 甲車集合資訊</h3>
+                <p><strong>時間：</strong>07:50 集合 / 08:00 發車</p>
+                <p><strong>地點：</strong>甲車庫香家</p>
+                <p><strong>車號：</strong>KAC-2599</p>
+                <a href="https://maps.google.com/?q=24.510285,120.816220" target="_blank" class="gps-link">
+                    <i class="fa-solid fa-location-dot"></i> 開啟地圖導航 (24.510285, 120.816220)
+                </a>
+            </div>
+
+            <div class="assembly-card">
+                <h3><i class="fa-solid fa-bus-simple"></i> 乙車集合資訊</h3>
+                <p><strong>時間：</strong>07:50 集合 / 08:00 發車</p>
+                <p><strong>地點：</strong>乙車菊滿家路口</p>
+                <p><strong>車號：</strong>KAC-8599</p>
+                <a href="https://maps.google.com/?q=24.580704,120.865276" target="_blank" class="gps-link">
+                    <i class="fa-solid fa-location-dot"></i> 開啟地圖導航 (24.580704, 120.865276)
+                </a>
+            </div>
+        </div>
+
+        <h2 class="section-title"><i class="fa-solid fa-route"></i> 3天2夜簡要路線概覽</h2>
+        <div class="spot-grid">
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>DAY 1 雲彰采風之旅</h3>
+                    <span style="font-size:12px; background:#D97353; color:#fff; padding:2px 8px; border-radius:10px;">8/23 (日)</span>
+                </div>
+                <div class="spot-card-body">
+                    苗栗出發 ➔ 西螺丸莊醬油(延平老街) ➔ 外傘頂洲(搭船+海鮮自助餐) ➔ 白人牙膏觀光工廠 ➔ 入住樂億皇家渡假酒店 (享用飯店合菜晚餐)
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>DAY 2 阿里山森林健行</h3>
+                    <span style="font-size:12px; background:#4A6B53; color:#fff; padding:2px 8px; border-radius:10px;">8/24 (一)</span>
+                </div>
+                <div class="spot-card-body">
+                    飯店出發 ➔ 阿里山國家森林遊樂區(搭遊園車至沼平公園 ➔ 姊妹潭 ➔ 受鎮宮 ➔ 巨木群步道 ➔ 14:00神木站小火車) ➔ 萬客香伴手禮 ➔ 新北平婚宴會館晚餐 ➔ 樂億皇家渡假酒店
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>DAY 3 莊園美學與伴手禮</h3>
+                    <span style="font-size:12px; background:#E6A15C; color:#fff; padding:2px 8px; border-radius:10px;">8/25 (二)</span>
+                </div>
+                <div class="spot-card-body">
+                    飯店出發 ➔ 蓋婭莊園 ➔ 老楊方城市觀光工廠 ➔ 川玥秘境鍋物(午餐) ➔ 欣欣生技食品(國軍罐頭) ➔ 澄霖沉香味道森林館 ➔ 如邑堂餅店(領便當) ➔ 溫馨返家
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: 每日詳細行程 -->
+    <div id="tab-itinerary" class="tab-content">
+        <!-- DAY 1 -->
+        <h2 class="section-title"><i class="fa-solid fa-sun"></i> DAY 1：2026.08.23 (星期日)</h2>
+        <div class="day-timeline">
+            <div class="timeline-item">
+                <span class="timeline-time">07:50 - 08:00</span>
+                <div class="timeline-title">歡樂集合與出發</div>
+                <div class="timeline-desc">甲車於「庫香家」集合、乙車於「菊滿家路口」集合，檢查隨身行李，準時 08:00 苗栗快樂出發！</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">上午</span>
+                <div class="timeline-title">西螺丸莊醬油 & 延平老街漫步</div>
+                <div class="timeline-desc">參觀百年黑豆蔭油釀造體驗與傳統陶甕，體驗漫步於古色古香的延平老街。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">11:40 - 14:30</span>
+                <div class="timeline-title">移動國土外傘頂洲 (搭乘觀光船 + 海鮮自助餐)</div>
+                <div class="timeline-desc">搭乘觀光漁筏探訪沙洲，在船上享用澎湃在地海鮮風味餐。登陸沙洲摸蛤、追和尚蟹（<strong>請穿著可下水之涼鞋或拖鞋</strong>）。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">下午</span>
+                <div class="timeline-title">白人牙膏觀光工廠 & 將軍府古蹟</div>
+                <div class="timeline-desc">了解牙膏自動化生產，參觀由清代原汁原味拆遷復原的「將軍府」古建物。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">傍晚 & 晚間</span>
+                <div class="timeline-title">入住樂億皇家渡假酒店 & 飯店合菜晚餐</div>
+                <div class="timeline-desc">辦理入住，稍作休整後於飯店內享用豐盛名廚合菜，享受歡樂家族夜間聚會。</div>
+            </div>
+        </div>
+
+        <!-- DAY 2 -->
+        <h2 class="section-title"><i class="fa-solid fa-tree"></i> DAY 2：2026.08.24 (星期一)</h2>
+        <div class="day-timeline">
+            <div class="timeline-item">
+                <span class="timeline-time">08:00</span>
+                <div class="timeline-title">飯店出發前往阿里山</div>
+                <div class="timeline-desc">享用飯店早餐後準時集合，搭乘遊覽車前往阿里山國家森林遊樂區。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">上午 - 14:00</span>
+                <div class="timeline-title">阿里山國家森林遊樂區 (漫步與小火車體驗)</div>
+                <div class="timeline-desc">
+                    搭乘園區遊園車至「沼平公園」➔ 漫步「姊妹潭」➔「受鎮宮」休憩補給 ➔ 漫步巨木群棧道健行芬多精洗禮至「神木站」。<br>
+                    <span style="color:#D97353; font-weight:bold;">★ 乘車提醒：最晚請搭乘 14:00 神木站發車之阿里山高山小火車返回阿里山站上車。</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">下午</span>
+                <div class="timeline-title">萬客香伴手禮 (觸口)</div>
+                <div class="timeline-desc">採買超人氣現做椰子球與牛軋餅，現場享用免費黑咖啡與熱茶解饞歇腳。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">晚間</span>
+                <div class="timeline-title">新北平婚宴會館 (合菜晚宴) ➔ 返回飯店休息</div>
+                <div class="timeline-desc">品嚐嘉義名店澎湃合菜佳餚，餐後返回樂億皇家渡假酒店續住。</div>
+            </div>
+        </div>
+
+        <!-- DAY 3 -->
+        <h2 class="section-title"><i class="fa-solid fa-castle"></i> DAY 3：2026.08.25 (星期二)</h2>
+        <div class="day-timeline">
+            <div class="timeline-item">
+                <span class="timeline-time">08:00 - 10:30</span>
+                <div class="timeline-title">蓋婭莊園 (美學希臘城堡) & 老楊方城市</div>
+                <div class="timeline-desc">漫步希臘宮廷風純白城堡打卡拍照 ➔ 造訪老楊方城市觀光工廠體驗巨型 3D 彩繪牆與點心試吃。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">12:00</span>
+                <div class="timeline-title">川玥秘境鍋物 (午餐饗宴)</div>
+                <div class="timeline-desc">享用精緻火鍋料理，舒適溫暖的用餐環境。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">13:30 - 16:00</span>
+                <div class="timeline-title">欣欣生技食品 ➔ 澄霖沉香味道森林館</div>
+                <div class="timeline-desc">參觀懷舊國軍罐頭文化並試吃選購 ➔ 漫步「台版兼六園」沉香庭園與落羽松水池。</div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-time">16:30 - 返抵</span>
+                <div class="timeline-title">如邑堂餅店 (領取便當餐盒) ➔ 滿載溫馨回憶返家</div>
+                <div class="timeline-desc">領取美味餐盒後搭車返回苗栗，結束愉快難忘的嘉義山海家族之旅！</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 3: 景點介紹 -->
+    <div id="tab-spots" class="tab-content">
+        <h2 class="section-title"><i class="fa-solid fa-map"></i> 景點與飯店特色介紹</h2>
+        <div class="spot-grid">
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>丸莊醬油</h3>
+                    <i class="fa-solid fa-jar-wheat" style="color:#D97353;"></i>
+                </div>
+                <div class="spot-card-body">
+                    西螺延平老街百年老店，全台首家黑豆蔭油觀光工廠。完整展現傳統陶甕釀造製程，感受百年傳承的醇厚醍醐味。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>外傘頂洲</h3>
+                    <i class="fa-solid fa-umbrella-beach" style="color:#4A6B53;"></i>
+                </div>
+                <div class="spot-card-body">
+                    全台最大「移動國土」。搭乘觀光漁筏於船上享用海鮮風味餐，登陸沙洲踩沙摸蛤、追尋和尚蟹，享受浪漫漂移之旅。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>白人牙膏觀光工廠</h3>
+                    <i class="fa-solid fa-tooth" style="color:#E6A15C;"></i>
+                </div>
+                <div class="spot-card-body">
+                    結合牙膏生產線與古蹟巡禮，館內更將清代「將軍府」整座古建物拆遷至此復原，寓教於樂。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>樂億皇家渡假酒店</h3>
+                    <i class="fa-solid fa-hotel" style="color:#D97353;"></i>
+                </div>
+                <div class="spot-card-body">
+                    嘉義市區代表性渡假飯店，融合現代時尚與城堡設計，寬敞客房與豐富設施，適合家族同樂連住兩晚。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>阿里山國家森林遊樂區</h3>
+                    <i class="fa-solid fa-tree" style="color:#4A6B53;"></i>
+                </div>
+                <div class="spot-card-body">
+                    享譽國際避暑勝地，以「日出、雲海、晚霞、森林、高山鐵路」五奇著稱。漫步巨木群步道吸納芬多精與阿里山小火車體驗。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>萬客香伴手禮</h3>
+                    <i class="fa-solid fa-cookie-bite" style="color:#E6A15C;"></i>
+                </div>
+                <div class="spot-card-body">
+                    位於觸口天長地久橋旁，超人氣手工椰子球與牛軋餅，現場提供黑咖啡免費無限暢飲。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>蓋婭莊園</h3>
+                    <i class="fa-solid fa-chess-rook" style="color:#D97353;"></i>
+                </div>
+                <div class="spot-card-body">
+                    全台首座希臘美學宮廷式莊園。純白希臘神話建築、日月鏡池與香氛庭園，宛如一秒飛往歐陸美景。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>老楊方城市觀光工廠</h3>
+                    <i class="fa-solid fa-cubes" style="color:#4A6B53;"></i>
+                </div>
+                <div class="spot-card-body">
+                    首座方塊酥主題館，超吸睛 3D 巨大彩繪牆與可愛白熊公仔，提供多款獨家口味豐富試吃。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>欣欣生技食品 (國軍罐頭)</h3>
+                    <i class="fa-solid fa-box-archive" style="color:#E6A15C;"></i>
+                </div>
+                <div class="spot-card-body">
+                    原國防部軍工廠轉型，記錄軍用乾糧與罐頭演進，可採購試吃傳奇紅燒牛肉與豬肉罐頭，懷舊感十足。
+                </div>
+            </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>澄霖沉香味道森林館</h3>
+                    <i class="fa-solid fa-spa" style="color:#D97353;"></i>
+                </div>
+                <div class="spot-card-body">
+                    沉香主題莊園，擁有「台版兼六園」日式景觀庭園與落羽松水池，充滿禪意與身心療癒感。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 4: 遊覽車座位 -->
+    <div id="tab-bus" class="tab-content">
+        <h2 class="section-title"><i class="fa-solid fa-bus"></i> 遊覽車座位安排</h2>
+        <div class="bus-container">
+            <!-- 甲車 KAC-2599 -->
+            <div class="bus-card">
+                <div class="bus-header">
+                    <h3><i class="fa-solid fa-bus"></i> 甲車 (KAC-2599)</h3>
+                </div>
+                <div class="bus-grid">
+                    <div class="bus-row">
+                        <div class="seat driver"><span class="seat-no">前方</span>司機</div>
+                        <div class="seat driver"><span class="seat-no">前方</span>導遊</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty" style="grid-column: span 2;">前車門</div>
+                    </div>
+                    <!-- 1排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">1-1</span><span class="seat-name">黃詞苡</span></div>
+                        <div class="seat"><span class="seat-no">1-2</span><span class="seat-name">黃旭崇</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat door"><span class="seat-no">1-3</span><span class="seat-name">前車門</span></div>
+                        <div class="seat door"><span class="seat-no">1-4</span><span class="seat-name">前車門</span></div>
+                    </div>
+                    <!-- 2排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">2-1</span><span class="seat-name">黃賴維妹</span></div>
+                        <div class="seat empty"><span class="seat-no">2-2</span>-</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">2-3</span><span class="seat-name">陳茂雄</span></div>
+                        <div class="seat"><span class="seat-no">2-4</span><span class="seat-name">黃菊坦</span></div>
+                    </div>
+                    <!-- 3排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">3-1</span><span class="seat-name">鐘晴根</span></div>
+                        <div class="seat"><span class="seat-no">3-2</span><span class="seat-name">鐘晴宇</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">3-3</span><span class="seat-name">阮浩台</span></div>
+                        <div class="seat"><span class="seat-no">3-4</span><span class="seat-name">陳瑞齡</span></div>
+                    </div>
+                    <!-- 4排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">4-1</span><span class="seat-name">黃麗生</span></div>
+                        <div class="seat empty"><span class="seat-no">4-2</span>-</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">4-3</span><span class="seat-name">陳佑楷</span></div>
+                        <div class="seat"><span class="seat-no">4-4</span><span class="seat-name">陳祥彬</span></div>
+                    </div>
+                    <!-- 5排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">5-1</span><span class="seat-name">王競煦</span></div>
+                        <div class="seat"><span class="seat-no">5-2</span><span class="seat-name">王伯淵</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">5-3</span><span class="seat-name">陳瑞珍</span></div>
+                        <div class="seat"><span class="seat-no">5-4</span><span class="seat-name">陳佑安</span></div>
+                    </div>
+                    <!-- 6排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">6-1</span><span class="seat-name">王競熙</span></div>
+                        <div class="seat"><span class="seat-no">6-2</span><span class="seat-name">黃佑宜</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">6-3</span><span class="seat-name">蔡獻樑</span></div>
+                        <div class="seat"><span class="seat-no">6-4</span><span class="seat-name">蔡依璇</span></div>
+                    </div>
+                    <!-- 門/安全門 -->
+                    <div class="bus-row">
+                        <div class="seat empty" style="grid-column: span 2; background:#FFEAE6;">安全門</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty" style="grid-column: span 2;">後車門</div>
+                    </div>
+                    <!-- 7排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">7-1</span><span class="seat-name">梁月圓</span></div>
+                        <div class="seat"><span class="seat-no">7-2</span><span class="seat-name">張意貞</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat door"><span class="seat-no">7-3</span><span class="seat-name">後車門</span></div>
+                        <div class="seat door"><span class="seat-no">7-4</span><span class="seat-name">後車門</span></div>
+                    </div>
+                    <!-- 8排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">8-1</span><span class="seat-name">鍾裕達</span></div>
+                        <div class="seat"><span class="seat-no">8-2</span><span class="seat-name">黃菊金</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat door"><span class="seat-no">8-3</span><span class="seat-name">後車門</span></div>
+                        <div class="seat door"><span class="seat-no">8-4</span><span class="seat-name">後車門</span></div>
+                    </div>
+                    <!-- 9排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">9-1</span><span class="seat-name">林秦銘</span></div>
+                        <div class="seat"><span class="seat-no">9-2</span><span class="seat-name">林駿偉</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">9-3</span><span class="seat-name">劉秀鳳</span></div>
+                        <div class="seat"><span class="seat-no">9-4</span><span class="seat-name">黃燈炎</span></div>
+                    </div>
+                    <!-- 10排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">10-1</span><span class="seat-name">姜禮重</span></div>
+                        <div class="seat empty"><span class="seat-no">10-2</span>-</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">10-3</span><span class="seat-name">黃庫香</span></div>
+                        <div class="seat"><span class="seat-no">10-4</span><span class="seat-name">吳家朋</span></div>
+                    </div>
+                    <!-- 11排 -->
+                    <div class="bus-row">
+                        <div class="seat empty"><span class="seat-no">11-1</span>-</div>
+                        <div class="seat empty"><span class="seat-no">11-2</span>-</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty"><span class="seat-no">11-3</span>-</div>
+                        <div class="seat"><span class="seat-no">11-4</span><span class="seat-name">曾偉宸</span></div>
+                    </div>
+                    <!-- 12排 -->
+                    <div class="bus-row">
+                        <div class="seat empty"><span class="seat-no">12-1</span>-</div>
+                        <div class="seat empty"><span class="seat-no">12-2</span>-</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty"><span class="seat-no">12-3</span>-</div>
+                        <div class="seat"><span class="seat-no">12-4</span><span class="seat-name">吳桂瑩</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 乙車 KAC-8599 -->
+            <div class="bus-card">
+                <div class="bus-header">
+                    <h3><i class="fa-solid fa-bus"></i> 乙車 (KAC-8599)</h3>
+                </div>
+                <div class="bus-grid">
+                    <div class="bus-row">
+                        <div class="seat driver"><span class="seat-no">前方</span>司機</div>
+                        <div class="seat driver"><span class="seat-no">前方</span>導遊</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty" style="grid-column: span 2;">前車門</div>
+                    </div>
+                    <!-- 1排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">1-1</span><span class="seat-name">甲車換車</span></div>
+                        <div class="seat"><span class="seat-no">1-2</span><span class="seat-name">甲車換車</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty"><span class="seat-no">1-3</span>-</div>
+                        <div class="seat empty"><span class="seat-no">1-4</span>-</div>
+                    </div>
+                    <!-- 2排 -->
+                    <div class="bus-row">
+                        <div class="seat empty"><span class="seat-no">2-1</span>-</div>
+                        <div class="seat"><span class="seat-no">2-2</span><span class="seat-name">邱秋華</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">2-3</span><span class="seat-name">甲車換車</span></div>
+                        <div class="seat empty"><span class="seat-no">2-4</span>-</div>
+                    </div>
+                    <!-- 3排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">3-1</span><span class="seat-name">林朝棟</span></div>
+                        <div class="seat"><span class="seat-no">3-2</span><span class="seat-name">彭惠媛</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">3-3</span><span class="seat-name">范氏海雲</span></div>
+                        <div class="seat"><span class="seat-no">3-4</span><span class="seat-name">林彤</span></div>
+                    </div>
+                    <!-- 4排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">4-1</span><span class="seat-name">黃欽光</span></div>
+                        <div class="seat"><span class="seat-no">4-2</span><span class="seat-name">彭貴圓</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">4-3</span><span class="seat-name">彭宥逵</span></div>
+                        <div class="seat"><span class="seat-no">4-4</span><span class="seat-name">彭子芸</span></div>
+                    </div>
+                    <!-- 5排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">5-1</span><span class="seat-name">葉清湧</span></div>
+                        <div class="seat"><span class="seat-no">5-2</span><span class="seat-name">彭瑞圓</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">5-3</span><span class="seat-name">林佳雯</span></div>
+                        <div class="seat empty"><span class="seat-no">5-4</span>-</div>
+                    </div>
+                    <!-- 6排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">6-1</span><span class="seat-name">葉庭瑋</span></div>
+                        <div class="seat"><span class="seat-no">6-2</span><span class="seat-name">呂蕙如</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty"><span class="seat-no">6-3</span>-</div>
+                        <div class="seat empty"><span class="seat-no">6-4</span>-</div>
+                    </div>
+                    <!-- 門/安全門 -->
+                    <div class="bus-row">
+                        <div class="seat empty" style="grid-column: span 2; background:#FFEAE6;">安全門</div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty" style="grid-column: span 2;">後車門</div>
+                    </div>
+                    <!-- 7排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">7-1</span><span class="seat-name">黃菊滿</span></div>
+                        <div class="seat"><span class="seat-no">7-2</span><span class="seat-name">黃秀梅</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat door"><span class="seat-no">7-3</span><span class="seat-name">後車門</span></div>
+                        <div class="seat door"><span class="seat-no">7-4</span><span class="seat-name">後車門</span></div>
+                    </div>
+                    <!-- 8排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">8-1</span><span class="seat-name">彭歆妤</span></div>
+                        <div class="seat"><span class="seat-no">8-2</span><span class="seat-name">彭峻枰</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat door"><span class="seat-no">8-3</span><span class="seat-name">後車門</span></div>
+                        <div class="seat door"><span class="seat-no">8-4</span><span class="seat-name">後車門</span></div>
+                    </div>
+                    <!-- 9排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">9-1</span><span class="seat-name">廖晉侑</span></div>
+                        <div class="seat"><span class="seat-no">9-2</span><span class="seat-name">廖晉瞳</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">9-3</span><span class="seat-name">廖賜寶</span></div>
+                        <div class="seat"><span class="seat-no">9-4</span><span class="seat-name">彭雅君</span></div>
+                    </div>
+                    <!-- 10排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">10-1</span><span class="seat-name">徐夏霓</span></div>
+                        <div class="seat"><span class="seat-no">10-2</span><span class="seat-name">向元玲</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">10-3</span><span class="seat-name">謝佩芳</span></div>
+                        <div class="seat"><span class="seat-no">10-4</span><span class="seat-name">彭宣豪</span></div>
+                    </div>
+                    <!-- 11排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">11-1</span><span class="seat-name">徐夏雲</span></div>
+                        <div class="seat"><span class="seat-no">11-2</span><span class="seat-name">彭厚才</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat"><span class="seat-no">11-3</span><span class="seat-name">彭為彬</span></div>
+                        <div class="seat"><span class="seat-no">11-4</span><span class="seat-name">彭苡豪</span></div>
+                    </div>
+                    <!-- 12排 -->
+                    <div class="bus-row">
+                        <div class="seat"><span class="seat-no">12-1</span><span class="seat-name">徐禮安</span></div>
+                        <div class="seat"><span class="seat-no">12-2</span><span class="seat-name">廖晉承</span></div>
+                        <div class="bus-aisle"></div>
+                        <div class="seat empty"><span class="seat-no">12-3</span>-</div>
+                        <div class="seat empty"><span class="seat-no">12-4</span>-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; padding: 14px 20px; background: #FFFDF8; border: 1.5px dashed #D97353; border-radius: 14px; font-size: 15px; color: #3A3027; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-circle-info" style="color: #D97353; font-size: 18px;"></i>
+            <span><strong>備註：</strong>1-3與1-4為前車門；7-3、7-4、8-3、8-4 均為後車門。</span>
+        </div>
+    </div>
+
+    <!-- Tab 5: 貼心提醒 -->
+    <div id="tab-notices" class="tab-content">
+        <h2 class="section-title"><i class="fa-solid fa-bell"></i> 行前與旅途貼心提醒</h2>
+        <ul class="notice-list">
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                <div class="notice-content">
+                    <h4>外傘頂洲衣著裝備</h4>
+                    <p>第一天外傘頂洲有沙洲登陸與摸蛤涉水活動，請務必攜帶拖鞋或穿著可下水之涼鞋/水鞋，並準備遮陽帽與防曬用品。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                <div class="notice-content">
+                    <h4>阿里山高山保暖與穿著</h4>
+                    <p>阿里山海拔約 2,200 公尺，氣溫較平地低約 10-12 度，請隨身準備保暖外套、輕便雨具，並穿著舒適耐走之休閒鞋或健行鞋。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="notice-content">
+                    <h4>阿里山小火車時間</h4>
+                    <p>第二天阿里山健行最後將於神木站搭乘高山小火車，預計最晚 14:00 發車，請大家隨團領隊行動並注意乘車時間。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-pills"></i></div>
+                <div class="notice-content">
+                    <h4>個人藥品與隨身物品</h4>
+                    <p>請攜帶健保卡、個人習慣用藥（暈車藥、腸胃藥、防蚊液等）、保溫瓶及雨具。如有特殊飲食需求請提前告知導遊。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="notice-content">
+                    <h4>行程彈性調整</h4>
+                    <p>以上行程時間順序及停留時間將依照當天實際車流、天候等狀況適度微調，請大家快樂配合見諒！</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function openTab(tabId, btn) {
+        const targetTab = document.getElementById(tabId);
+        if (!targetTab) {
+            console.warn('Tab content element not found:', tabId);
+            return;
+        }
+
+        // 隱藏所有內容
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        // 取消所有按鈕 active
+        const tabs = document.querySelectorAll('.nav-tab');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // 顯示目標 tab
+        targetTab.classList.add('active');
+
+        // 激活目標按鈕
+        if (btn) {
+            btn.classList.add('active');
+        } else if (typeof event !== 'undefined' && event && event.currentTarget) {
+            event.currentTarget.classList.add('active');
+        }
+
+        // 滾動回頂部
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
