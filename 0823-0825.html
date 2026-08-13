@@ -588,6 +588,9 @@
         <button class="nav-tab" onclick="openTab('tab-itinerary')">
             <i class="fa-solid fa-list-check"></i> 每日詳細行程
         </button>
+        <button class="nav-tab" onclick="openTab('tab-alishan')">
+            <i class="fa-solid fa-tree"></i> 阿里山攻略
+        </button>
         <button class="nav-tab" onclick="openTab('tab-spots')">
             <i class="fa-solid fa-map-location-dot"></i> 景點介紹
         </button>
@@ -597,9 +600,10 @@
         <button class="nav-tab" onclick="openTab('tab-dining')">
             <i class="fa-solid fa-utensils"></i> 用餐桌次
         </button>
-        <button class="nav-tab" onclick="openTab('tab-notices')">
-            <i class="fa-solid fa-triangle-exclamation"></i> 貼心提醒
+        <button class="nav-tab" onclick="openTab('tab-rooms')">
+            <i class="fa-solid fa-bed"></i> 飯店房號
         </button>
+
     </nav>
 
     <!-- Tab 1: 行程總覽 & 集合資訊 -->
@@ -608,18 +612,18 @@
         <div class="assembly-box">
             <div class="assembly-card">
                 <h3><i class="fa-solid fa-bus-simple"></i> 甲車集合資訊</h3>
-                <p><strong>時間：</strong>07:50 集合 / 08:00 發車</p>
-                <p><strong>地點：</strong>甲車庫香家</p>
+                <p><strong>時間：</strong>07:20 高鐵苗栗站 / 07:50 庫香家上車 / 08:00 發車</p>
+                <p><strong>地點：</strong>07:20 高鐵苗栗站 1 號出口 / 庫香家</p>
                 <p><strong>車號：</strong>KAC-2599</p>
-                <a href="https://maps.google.com/?q=24.510285,120.816220" target="_blank" class="gps-link">
-                    <i class="fa-solid fa-location-dot"></i> 開啟地圖導航 (24.510285, 120.816220)
+                <a href="https://maps.google.com/?q=24.510285,120.816229"  target="_blank" class="gps-link">
+                    <i class="fa-solid fa-location-dot"></i> 開啟地圖導航 (24.510285, 120.816229)
                 </a>
             </div>
 
             <div class="assembly-card">
                 <h3><i class="fa-solid fa-bus-simple"></i> 乙車集合資訊</h3>
-                <p><strong>時間：</strong>07:50 集合 / 08:00 發車</p>
-                <p><strong>地點：</strong>乙車菊滿家路口</p>
+                <p><strong>時間：</strong>07:50 菊滿家路口上車 / 08:00 發車</p>
+                <p><strong>地點：</strong>菊滿家路口周邊</p>
                 <p><strong>車號：</strong>KAC-8599</p>
                 <a href="https://maps.google.com/?q=24.580704,120.865276" target="_blank" class="gps-link">
                     <i class="fa-solid fa-location-dot"></i> 開啟地圖導航 (24.580704, 120.865276)
@@ -641,7 +645,7 @@
 
             <div class="spot-card">
                 <div class="spot-card-header">
-                    <h3>DAY 2 阿里山森林健行</h3>
+                    <h3>DAY 2 阿里山森呼吸</h3>
                     <span style="font-size:12px; background:#4A6B53; color:#fff; padding:2px 8px; border-radius:10px;">8/24 (一)</span>
                 </div>
                 <div class="spot-card-body">
@@ -651,14 +655,56 @@
 
             <div class="spot-card">
                 <div class="spot-card-header">
-                    <h3>DAY 3 莊園美學與伴手禮</h3>
+                    <h3>DAY 3 莊園美學旅圖</h3>
                     <span style="font-size:12px; background:#E6A15C; color:#fff; padding:2px 8px; border-radius:10px;">8/25 (二)</span>
                 </div>
                 <div class="spot-card-body">
                     飯店出發 ➔ 蓋婭莊園 ➔ 老楊方城市觀光工廠 ➔ 川玥秘境鍋物(午餐) ➔ 欣欣生技食品(國軍罐頭) ➔ 澄霖沉香味道森林館 ➔ 如邑堂餅店(領便當) ➔ 溫馨返家
                 </div>
             </div>
-        </div>
+
+         <h2 class="section-title"><i class="fa-solid fa-sun"></i> 重要及貼心提醒</h2>
+
+         <li class="notice-item" style="border: 2px solid #D97353; background: #FFFDFB;">
+                <div class="notice-icon" style="background: #FFEBE5; color: #D97353;"><i class="fa-solid fa-pump-soap"></i></div>
+                <div class="notice-content">
+                    <h4 style="color: #D97353;"><i class="fa-solid fa-leaf"></i>重要提醒</h4>
+                    <p><strong>約定上車之時間請務必準時，以免影響旅遊行程與心情</strong>。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon">
+                <h4 style="color: #D97353;"><i class="fa-solid fa-pills"></i></div>
+                <div class="notice-content">
+                    <h4>個人證件與藥品</h4>
+                    <p>請務必攜帶身分證/健保卡/優惠票證件、個人習慣用藥（暈車藥、防蚊液等）。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-person-swimming"></i></div>
+                <div class="notice-content">
+                    <h4>外傘頂洲衣著裝備</h4>
+                    <p>第一天外傘頂洲有沙洲登陸與摸蛤涉水活動，請務必攜帶拖鞋或穿著可下水之涼鞋/水鞋，並準備遮陽帽與防曬用品。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                <div class="notice-content">
+                    <h4>阿里山高山保暖與穿著</h4>
+                    <p>阿里山海拔約 2,200 公尺，氣溫較平地低約 10-12 度，請隨身準備保暖外套、輕便雨具、遮陽物品，並穿著舒適耐走之休閒鞋或健行鞋。</p>
+                </div>
+            </li>
+
+            <li class="notice-item">
+                <div class="notice-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="notice-content">
+                    <h4>行程彈性調整</h4>
+                    <p>以上行程時間順序及停留時間將依照當天實際車流、天候等狀況適度微調，敬請見諒！</p>
+                </div>
+            </div>
     </div>
 
     <!-- Tab 2: 每日詳細行程 -->
@@ -667,9 +713,9 @@
         <h2 class="section-title"><i class="fa-solid fa-sun"></i> DAY 1：2026.08.23 (星期日)</h2>
         <div class="day-timeline">
             <div class="timeline-item">
-                <span class="timeline-time">07:50 - 08:00</span>
+                <span class="timeline-time">07:20 - 08:00</span>
                 <div class="timeline-title">歡樂集合與出發</div>
-                <div class="timeline-desc">甲車於「庫香家」集合、乙車於「菊滿家路口」集合，檢查隨身行李，準時 08:00 苗栗快樂出發！</div>
+                <div class="timeline-desc">甲車於「07:20 高鐵苗栗站 1 號出口 / 07:50 庫香家」集合、乙車於「菊滿家路口」集合，檢查隨身行李，準時 08:00 苗栗快樂出發！</div>
             </div>
             <div class="timeline-item">
                 <span class="timeline-time">09:30 - 10:30</span>
@@ -679,7 +725,7 @@
             <div class="timeline-item">
                 <span class="timeline-time">11:40 - 14:30</span>
                 <div class="timeline-title">移動國土外傘頂洲 (搭乘觀光船 + 海鮮自助餐)</div>
-                <div class="timeline-desc">搭乘觀光漁筏探訪沙洲，在船上享用澎湃在地海鮮風味餐。登陸沙洲摸蛤、追和尚蟹（<strong>請穿著可下水之涼鞋或拖鞋</strong>）。</div>
+                <div class="timeline-desc">搭乘觀光漁筏探訪沙洲，在船上享用澎湃在地海鮮風味餐。登陸沙洲摸蛤、追和尚蟹。（<strong>請穿著可下水之涼鞋或拖鞋及依個人狀況服用暈船藥品</strong>）。</div>
             </div>
             <div class="timeline-item">
                 <span class="timeline-time">15:30 - 17:00</span>
@@ -688,8 +734,8 @@
             </div>
             <div class="timeline-item">
                 <span class="timeline-time">傍晚 & 晚間</span>
-                <div class="timeline-title">入住樂億皇家渡假酒店 & 飯店合菜晚餐</div>
-                <div class="timeline-desc">辦理入住，稍作休整後於飯店內享用豐盛名廚合菜，享受歡樂家族夜間聚會。（<strong>提醒：飯店配合環保政策不提供個人一次性盥洗備品</strong>）</div>
+                <div class="timeline-title">入住樂億皇家渡假酒店 & 飯店合菜晚餐 & KTV打鬥四(樂齡組)&游泳池泅水(兒童組)</div>
+                <div class="timeline-desc">辦理入住，稍作休整後於飯店內享用豐盛佳餚，享受歡樂家族夜間聚會與歡樂。（<strong>提醒：飯店配合環保政策不提供個人一次性盥洗備品</strong>）</div>
             </div>
         </div>
 
@@ -699,14 +745,24 @@
             <div class="timeline-item">
                 <span class="timeline-time">08:00</span>
                 <div class="timeline-title">飯店出發前往阿里山</div>
-                <div class="timeline-desc">享用飯店早餐後準時集合，搭乘遊覽車前往阿里山國家森林遊樂區。</div>
+                <div class="timeline-desc">享用飯店早餐後準時集合，搭乘遊覽車前往阿里山國家森林遊樂區（<strong>請依個人狀況服用暈車藥品並請攜帶薄外套/遮陽物品</strong>）。</div>
             </div>
             <div class="timeline-item">
-                <span class="timeline-time">上午 - 14:20</span>
-                <div class="timeline-title">阿里山國家森林遊樂區 (漫步與小火車體驗)</div>
+                <span class="timeline-time">10:00 - 14:20</span>
+                <div class="timeline-title">阿里山國家森林遊樂區 (請務必攜帶身分證及特殊票種證件)</div>
                 <div class="timeline-desc">
                     搭乘園區遊園車至「沼平公園」➔ 漫步「姊妹潭」➔「受鎮宮」休憩補給 ➔ 漫步巨木群棧道健行芬多精洗禮至「神木站」。<br>
-                    <span style="color:#D97353; font-weight:bold;">★ 乘車提醒：最晚請搭乘 14:00 神木站發車之阿里山高山小火車返回阿里山站上車。</span>
+                    <div style="margin-top:10px; padding:10px 14px; background:#FFFDF8; border:1.5px solid #FFE0B2; border-left:4px solid #D97353; border-radius:8px;">
+                        <strong style="color:#D97353; font-size:15px;"><i class="fa-solid fa-train"></i> 神木站火車時刻表：</strong>
+                        <ul style="margin-top:4px; margin-left:20px; list-style-type:disc; color:var(--text-dark); line-height:1.7;">
+                            <li><strong>13:30</strong> 神木站發車</li>
+                            <li><strong>14:00</strong> 神木站發車（請務必搭上，不然就要走下山唷!）</li>
+                            <li><strong style="color:#4A6B53;"><i class="fa-solid fa-bus"></i> 14:20</strong> 阿里山車站總站集合上遊覽車</li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openTab('tab-alishan')" class="gps-link" style="margin-top:10px; display:inline-flex;">
+                        <i class="fa-solid fa-map-location-dot"></i> 開啟【阿里山漫步路線與分流攻略圖】
+                    </a>
                 </div>
             </div>
             <div class="timeline-item">
@@ -718,11 +774,11 @@
                 <span class="timeline-time">晚間</span>
                 <div class="timeline-title">新北平婚宴會館 (合菜晚宴) ➔ 返回飯店休息</div>
                 <div class="timeline-desc">品嚐嘉義名店澎湃合菜佳餚，餐後返回樂億皇家渡假酒店續住。</div>
-            </div>
+           </div>
         </div>
 
         <!-- DAY 3 -->
-        <h2 class="section-title"><i class="fa-solid fa-castle"></i> DAY 3：2026.08.25 (星期二)</h2>
+        <h2 class="section-title"><i class="fa-solid fa-sun"></i> DAY 3：2026.08.25 (星期二)</h2>
         <div class="day-timeline">
             <div class="timeline-item">
                 <span class="timeline-time">08:00 - 10:30</span>
@@ -740,9 +796,136 @@
                 <div class="timeline-desc">參觀懷舊國軍罐頭文化並試吃選購 ➔ 漫步「台版兼六園」沉香庭園與落羽松水池。</div>
             </div>
             <div class="timeline-item">
-                <span class="timeline-time">16:30 - 返抵</span>
+                <span class="timeline-time">16:30 -18:00 賦歸溫暖的家鄉</span>
                 <div class="timeline-title">如邑堂餅店 (領取便當餐盒) ➔ 滿載溫馨回憶返家</div>
                 <div class="timeline-desc">領取美味餐盒後搭車返回苗栗，結束愉快難忘的嘉義山海家族之旅！</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Tab: 阿里山漫步攻略圖 -->
+    <div id="tab-alishan" class="tab-content">
+        <h2 class="section-title"><i class="fa-solid fa-tree"></i> 阿里山國家森林遊樂區 漫步攻略圖</h2>
+        
+        <!-- 快速數據列 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 25px;">
+            <div style="background: var(--card-bg); border: 1.5px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center;">
+                <div style="font-size: 12px; color: var(--text-muted);">總步行時間</div>
+                <div style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-top: 2px;">
+                    <i class="fa-regular fa-clock" style="color: var(--accent-orange);"></i> 約 50-120 分
+                </div>
+            </div>
+            <div style="background: var(--card-bg); border: 1.5px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center;">
+                <div style="font-size: 12px; color: var(--text-muted);">步行總里程</div>
+                <div style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-top: 2px;">
+                    <i class="fa-solid fa-person-walking" style="color: var(--accent-orange);"></i> 約 1.1 - 2.8 km
+                </div>
+            </div>
+            <div style="background: var(--card-bg); border: 1.5px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center;">
+                <div style="font-size: 12px; color: var(--text-muted);">雙重交通體驗</div>
+                <div style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-top: 2px;">
+                    <i class="fa-solid fa-bus"></i> 遊園車 + <i class="fa-solid fa-train"></i> 小火車
+                </div>
+            </div>
+            <div style="background: var(--card-bg); border: 1.5px solid var(--border-color); border-radius: 12px; padding: 12px; text-align: center;">
+                <div style="font-size: 12px; color: var(--text-muted);">路線難易度</div>
+                <div style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-top: 2px;">
+                    <i class="fa-solid fa-users" style="color: var(--accent-orange);"></i> 親子老少咸宜
+                </div>
+            </div>
+        </div>
+
+        <!-- 階段一：核心漫步路線 -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 18px; padding: 22px; margin-bottom: 25px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px dashed var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+                <h3 style="font-size: 20px; color: var(--primary-color); display: flex; align-items: center; gap: 8px;">
+                    <span style="background: var(--primary-color); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px;">1</span>
+                    核心漫步路線（全團統一分批搭乘電動車至最高點沼平公園）
+                </h3>
+                <span style="font-size: 12px; background: var(--primary-light); color: var(--primary-color); font-weight: 700; padding: 4px 10px; border-radius: 12px;">起點 ➔ 中樞點</span>
+            </div>
+
+            <div class="day-timeline" style="margin-bottom: 0;">
+                <div class="timeline-item">
+                    <span class="timeline-time"><i class="fa-solid fa-bus"></i> 搭車約 10 分鐘 (2.2 km)</span>
+                    <div class="timeline-title">遊園車候車總站 ➔ 沼平公園 (沼平線)</div>
+                    <div class="timeline-desc">
+                        搭乘電動遊園車至沼平公園站(海拔高度約為2,274公尺)。<br>
+                        <span style="color: var(--accent-orange); font-size: 13px;"><i class="fa-solid fa-circle-info"></i> 抵達後請依照指標跨越鐵路平交道至沼平車站。</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-time"><i class="fa-solid fa-person-walking"></i> 步行約 15~20 分鐘 (690m)</span>
+                    <div class="timeline-title">沼平車站 ➔ 姊妹潭</div>
+                    <div class="timeline-desc">穿梭於杉木林間吸納滿滿芬多精，欣賞高山湖泊「姊妹潭」與獨特水上涼亭美景。</div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-time"><i class="fa-solid fa-person-walking"></i> 步行約 5~10 分鐘 (270m)</span>
+                    <div class="timeline-title">姊妹潭 ➔ 木蘭園</div>
+                    <div class="timeline-desc">行經靜謐林道與木棧道，沿途空氣清新，可欣賞高山花卉與溪流景致。</div>
+                </div>
+
+                <div class="timeline-item" style="border: 2px solid var(--accent-yellow); background: #FFFDF8;">
+                    <span class="timeline-time" style="background: #FFE8D6; color: #D97353;"><i class="fa-solid fa-gopuram"></i> 中樞休息站</span>
+                    <div class="timeline-title" style="color: var(--accent-orange);">木蘭園 ➔ 受鎮宮 (休息與分流點)</div>
+                    <div class="timeline-desc">
+                        阿里山香火最鼎盛的玄天上帝廟，旁設有香林服務區、洗手洗手間（WC）與美食攤位。在此處可依體力選擇下半段回程方案。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 階段二：下半段分流方案 -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 18px; padding: 22px; box-shadow: var(--shadow-sm);">
+            <div style="border-bottom: 2px dashed var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+                <h3 style="font-size: 20px; color: var(--primary-color); display: flex; align-items: center; gap: 8px;">
+                    <span style="background: var(--accent-orange); color: #fff; border-radius: 50%; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px;">2</span>
+                    受鎮宮 ➔ 兩大回程分流方案(請勿落單，易迷失森林。)
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">請長輩與家人們依體力、喜好自由選擇方案 1 或方案 2：</p>
+                <p style="font-size: 14px; color: var(--accent-orange); font-weight: 700; margin-top: 6px; display: flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-coins"></i> 備註：現場發放零用金，請依個人選擇之方案自行至售票口購買回程車票。
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <!-- 方案 1 -->
+                <div style="background: #F4F8F5; border: 2px solid #A5D6A7; border-radius: 14px; padding: 18px; position: relative;">
+                    <span style="position: absolute; top: 12px; right: 12px; background: #2E7D32; color: #fff; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 10px;">省力快速</span>
+                    <h4 style="font-size: 18px; color: #1B5E20; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-bus"></i> 方案 1：遊園車回程 (香林線)
+                    </h4>
+                    <p style="font-size: 13px; color: #388E3C; margin-bottom: 12px; font-weight: bold;">適合：長輩、小朋友或欲節省體力者</p>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-dark); line-height: 1.8;">
+                        <li><strong>乘車地點：</strong>受鎮宮旁「香林乘車站」</li>
+                        <li><strong>目的站點：</strong>遊園車總站 / 旅客服務中心</li>
+                        <li><strong>所需時間：</strong>車程約 10 分鐘</li>
+                        <li><strong>特色說明：</strong>原路直達總站，免走階梯下坡，輕鬆省力。</li>
+                    </ul>
+                </div>
+
+                <!-- 方案 2 -->
+                <div style="background: #FFFDF8; border: 2px solid #FFE0B2; border-radius: 14px; padding: 18px; position: relative;">
+                    <span style="position: absolute; top: 12px; right: 12px; background: #E6A15C; color: #fff; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 10px;">推薦體驗</span>
+                    <h4 style="font-size: 18px; color: #E65100; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-train"></i> 方案 2：巨木棧道 ➔ 小火車回程
+                    </h4>
+                    <p style="font-size: 13px; color: #F57C00; margin-bottom: 12px; font-weight: bold;">適合：喜愛巨木森林景致、欲體驗高山小火車者</p>
+                    <ul style="list-style: none; font-size: 14px; color: var(--text-dark); line-height: 1.8;">
+                        <li><strong>步行路線：</strong>受鎮宮 ➔ 巨木群棧Ⅱ➔ 28號巨木 ➔ 神怡流瀑 ➔ 神怡橋 ➔ 神木車站</li>
+                        <li><strong>健行距離：</strong>步行約 40-50 分鐘 (約 1km)</li>
+                        <li><strong>小火車體驗：</strong>由「神木車站」搭乘阿里山小火車返回「阿里山車站」(車程約 7 分鐘)</li>
+                        <li style="margin-top: 8px; background: #FFEBE5; padding: 8px 12px; border-radius: 8px; border-left: 3px solid #D97353;">
+                            <strong style="color: #D97353;"><i class="fa-solid fa-clock"></i> 神木站火車時刻表：</strong><br>
+                            • <strong>13:30</strong> 神木站發車<br>
+                            • <strong>14:00</strong> 神木站發車（請務必搭上，不然就要走下山唷!）<br>
+                            • <strong style="color: #2E7D32;"><i class="fa-solid fa-bus"></i> 14:20 全員上遊覽車</strong>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -850,6 +1033,16 @@
                     沉香主題莊園，擁有「台版兼六園」日式景觀庭園與落羽松水池，充滿禪意與身心療癒感。
                 </div>
             </div>
+
+            <div class="spot-card">
+                <div class="spot-card-header">
+                    <h3>如邑堂餅家</h3>
+                   <i class="fa-solid fa-cookie-bite" style="color:#E6A15C;"></i>
+                </div>
+                <div class="spot-card-body">
+                    謝哲青為品牌代言人，尋味台灣，飄香世界，連續五屆榮獲台灣全國太陽餅競賽冠軍的伴手禮。
+                </div>
+            </div>
         </div>
     </div>
 
@@ -890,7 +1083,7 @@
                         <div class="seat"><span class="seat-no">3-1</span><span class="seat-name">鍾晴根</span></div>
                         <div class="seat"><span class="seat-no">3-2</span><span class="seat-name">鍾晴宇</span></div>
                         <div class="bus-aisle"></div>
-                        <div class="seat"><span class="seat-no">3-3</span><span class="seat-name">阮浩台</span></div>
+                        <div class="seat"><span class="seat-no">3-3</span><span class="seat-name">阮浩臺</span></div>
                         <div class="seat"><span class="seat-no">3-4</span><span class="seat-name">陳瑞齡</span></div>
                     </div>
                     <!-- 4排 -->
@@ -906,7 +1099,7 @@
                         <div class="seat"><span class="seat-no">5-1</span><span class="seat-name">王競煦</span></div>
                         <div class="seat"><span class="seat-no">5-2</span><span class="seat-name">王柏淵</span></div>
                         <div class="bus-aisle"></div>
-                        <div class="seat"><span class="seat-no">5-3</span><span class="seat-name">陳瑞珍</span></div>
+                        <div class="seat"><span class="seat-no">5-3</span><span class="seat-name"></span></div>
                         <div class="seat"><span class="seat-no">5-4</span><span class="seat-name">陳佑安</span></div>
                     </div>
                     <!-- 6排 -->
@@ -915,7 +1108,7 @@
                         <div class="seat"><span class="seat-no">6-2</span><span class="seat-name">黃佑宜</span></div>
                         <div class="bus-aisle"></div>
                         <div class="seat"><span class="seat-no">6-3</span><span class="seat-name">蔡獻樑</span></div>
-                        <div class="seat"><span class="seat-no">6-4</span><span class="seat-name">蔡依璇</span></div>
+                        <div class="seat"><span class="seat-no">6-4</span><span class="seat-name">陳瑞珍</span></div>
                     </div>
                     <!-- 門/安全門 -->
                     <div class="bus-row">
@@ -925,7 +1118,7 @@
                     </div>
                     <!-- 7排 -->
                     <div class="bus-row">
-                        <div class="seat"><span class="seat-no">7-1</span><span class="seat-name">梁月圓</span></div>
+                        <div class="seat empty"><span class="seat-no">7-1</span>-</div>
                         <div class="seat"><span class="seat-no">7-2</span><span class="seat-name">張意貞</span></div>
                         <div class="bus-aisle"></div>
                         <div class="seat door"><span class="seat-no">7-3</span><span class="seat-name">後車門</span></div>
@@ -941,7 +1134,7 @@
                     </div>
                     <!-- 9排 -->
                     <div class="bus-row">
-                        <div class="seat"><span class="seat-no">9-1</span><span class="seat-name">林秦銘</span></div>
+                        <div class="seat empty"><span class="seat-no">9-1</span>-</div>
                         <div class="seat"><span class="seat-no">9-2</span><span class="seat-name">林駿瑋</span></div>
                         <div class="bus-aisle"></div>
                         <div class="seat"><span class="seat-no">9-3</span><span class="seat-name">劉秀鳳</span></div>
@@ -949,7 +1142,7 @@
                     </div>
                     <!-- 10排 -->
                     <div class="bus-row">
-                        <div class="seat"><span class="seat-no">10-1</span><span class="seat-name">姜禮重</span></div>
+                        <div class="seat empty"><span class="seat-no">10-1</span>-</div>
                         <div class="seat empty"><span class="seat-no">10-2</span>-</div>
                         <div class="bus-aisle"></div>
                         <div class="seat"><span class="seat-no">10-3</span><span class="seat-name">黃庫香</span></div>
@@ -960,7 +1153,7 @@
                         <div class="seat empty"><span class="seat-no">11-1</span>-</div>
                         <div class="seat empty"><span class="seat-no">11-2</span>-</div>
                         <div class="bus-aisle"></div>
-                        <div class="seat empty"><span class="seat-no">11-3</span>-</div>
+                        <div class="seat"><span class="seat-no">11-3</span><span class="seat-name">吳桂瑩</span></div>
                         <div class="seat"><span class="seat-no">11-4</span><span class="seat-name">曾偉宸</span></div>
                     </div>
                     <!-- 12排 -->
@@ -969,7 +1162,7 @@
                         <div class="seat empty"><span class="seat-no">12-2</span>-</div>
                         <div class="bus-aisle"></div>
                         <div class="seat empty"><span class="seat-no">12-3</span>-</div>
-                        <div class="seat"><span class="seat-no">12-4</span><span class="seat-name">吳桂瑩</span></div>
+                        <div class="seat empty"><span class="seat-no">12-4</span>-</div>
                     </div>
                 </div>
             </div>
@@ -988,8 +1181,8 @@
                     </div>
                     <!-- 1排 -->
                     <div class="bus-row">
-                        <div class="seat"><span class="seat-no">1-1</span><span class="seat-name">甲車換車</span></div>
-                        <div class="seat"><span class="seat-no">1-2</span><span class="seat-name">甲車換車</span></div>
+                        <div class="seat empty"><span class="seat-no">1-1</span>-</div>
+                        <div class="seat empty"><span class="seat-no">1-2</span>-</div>
                         <div class="bus-aisle"></div>
                         <div class="seat door"><span class="seat-no">1-3</span><span class="seat-name">前車門</span></div>
                         <div class="seat door"><span class="seat-no">1-4</span><span class="seat-name">前車門</span></div>
@@ -999,7 +1192,7 @@
                         <div class="seat empty"><span class="seat-no">2-1</span>-</div>
                         <div class="seat"><span class="seat-no">2-2</span><span class="seat-name">邱秋華</span></div>
                         <div class="bus-aisle"></div>
-                        <div class="seat"><span class="seat-no">2-3</span><span class="seat-name">甲車換車</span></div>
+                        <div class="seat empty"><span class="seat-no">2-3</span>-</div>
                         <div class="seat empty"><span class="seat-no">2-4</span>-</div>
                     </div>
                     <!-- 3排 -->
@@ -1131,7 +1324,7 @@
                         <span class="dining-tag">黃菊坦</span>
                         <span class="dining-tag">陳茂雄</span>
                         <span class="dining-tag">陳瑞齡</span>
-                        <span class="dining-tag">阮浩台</span>
+                        <span class="dining-tag">阮浩臺</span>
                         <span class="dining-tag">陳佑楷</span>
                         <span class="dining-tag">陳佑安</span>
                         <span class="dining-tag">陳祥彬</span>
@@ -1162,19 +1355,18 @@
                 <div class="dining-card">
                     <div class="dining-card-header">
                         <h3><i class="fa-solid fa-bowl-food"></i> 第 3 桌</h3>
-                        <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">10位</span>
+                        <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">9位</span>
                     </div>
                     <div class="dining-members">
                         <span class="dining-tag">黃菊滿</span>
                         <span class="dining-tag">黃秀梅</span>
                         <span class="dining-tag">張意貞</span>
-                        <span class="dining-tag">梁月圓</span>
                         <span class="dining-tag">鍾裕達</span>
                         <span class="dining-tag">林駿瑋</span>
-                        <span class="dining-tag">林秦銘</span>
-                        <span class="dining-tag">姜禮重</span>
                         <span class="dining-tag">黃庫香</span>
                         <span class="dining-tag">吳家朋</span>
+                        <span class="dining-tag">曾偉宸</span>
+                        <span class="dining-tag">吳桂瑩</span>
                     </div>
                 </div>
 
@@ -1242,13 +1434,13 @@
                 <div class="dining-card" style="border: 2px solid #2E7D32; background: #F4F8F5;">
                     <div class="dining-card-header" style="background: #2E7D32; border-color: #1B5E20;">
                         <h3 style="color: #FFFFFF;"><i class="fa-solid fa-leaf"></i> 素食桌</h3>
-                        <span style="font-size: 12px; background: #81C784; color: #1B5E20; font-weight: bold; padding: 2px 8px; border-radius: 10px;">4位</span>
+                        <span style="font-size: 12px; background: #81C784; color: #1B5E20; font-weight: bold; padding: 2px 8px; border-radius: 10px;">4位-3位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 陳瑞珍</span>
-                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 蔡獻樑</span>
-                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 蔡依璇</span>
                         <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 黃菊金</span>
+                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 蔡獻樑</span>
+                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 陳瑞珍</span>
+                        <span class="dining-tag" style="background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20;"><i class="fa-solid fa-seedling"></i> 蔡依璇*</span>
                     </div>
                 </div>
 
@@ -1256,11 +1448,9 @@
                 <div class="dining-card" style="border: 2px solid #1976D2; background: #F0F7FF;">
                     <div class="dining-card-header" style="background: #1976D2; border-color: #0D47A1;">
                         <h3 style="color: #FFFFFF;"><i class="fa-solid fa-user-tie"></i> 司領桌</h3>
-                        <span style="font-size: 12px; background: #90CAF9; color: #0D47A1; font-weight: bold; padding: 2px 8px; border-radius: 10px;">4位</span>
+                        <span style="font-size: 12px; background: #90CAF9; color: #0D47A1; font-weight: bold; padding: 2px 8px; border-radius: 10px;">2位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-user-gear"></i> 曾偉宸</span>
-                        <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-user-gear"></i> 吳桂瑩</span>
                         <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-bus"></i> 甲車司機</span>
                         <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-bus"></i> 乙車司機</span>
                     </div>
@@ -1272,7 +1462,7 @@
         <div id="dining-day3" class="dining-sub-content" style="display: none;">
             <div style="background: #FFFDF8; border: 1.5px solid #E6A15C; border-radius: 14px; padding: 15px 20px; margin-bottom: 25px;">
                 <h3 style="color: #D97353; font-size: 18px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-hot-tub-person"></i> 川玥秘境鍋物 專屬桌次配置 (總計 62 位)
+                    <i class="fa-solid fa-hot-tub-person"></i> 川玥秘境鍋物 專屬桌次配置 (總計 55 位)
                 </h3>
                 <p style="color: var(--text-muted); font-size: 14px;">分為 <strong>X區</strong> 與 <strong>A區</strong> 包廂/桌號，請依個人對應之桌號入座用餐。</p>
             </div>
@@ -1314,10 +1504,10 @@
                         <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">黃菊坦</span>
-                        <span class="dining-tag">陳茂雄</span>
-                        <span class="dining-tag">陳瑞齡</span>
-                        <span class="dining-tag">阮浩台</span>
+                        <span class="dining-tag">黃菊金</span>
+                        <span class="dining-tag">張意貞</span>
+                        <span class="dining-tag">鍾裕達</span> 
+                        <span class="dining-tag">林駿瑋</span>
                     </div>
                 </div>
 
@@ -1356,8 +1546,8 @@
                         <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">鍾裕達</span>
-                        <span class="dining-tag">林駿瑋</span>
+                        <span class="dining-tag">黃菊滿</span>
+                        <span class="dining-tag">黃秀梅</span>
                     </div>
                 </div>
 
@@ -1368,8 +1558,8 @@
                         <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">林秦銘</span>
-                        <span class="dining-tag">姜禮重</span>
+                        <span class="dining-tag">吳桂瑩</span>
+                        <span class="dining-tag">保留席</span>
                     </div>
                 </div>
 
@@ -1377,10 +1567,9 @@
                 <div class="dining-card" style="border: 2px solid #1976D2; background: #F0F7FF;">
                     <div class="dining-card-header" style="background: #1976D2; border-color: #0D47A1;">
                         <h3 style="color: #FFFFFF;"><i class="fa-solid fa-user-tie"></i> 桌號 X8 (司領桌)</h3>
-                        <span style="font-size: 12px; background: #90CAF9; color: #0D47A1; font-weight: bold; padding: 2px 8px; border-radius: 10px;">3位</span>
+                        <span style="font-size: 12px; background: #90CAF9; color: #0D47A1; font-weight: bold; padding: 2px 8px; border-radius: 10px;">2位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-user-gear"></i> 吳桂瑩</span>
                         <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-bus"></i> 甲車司機</span>
                         <span class="dining-tag" style="background: #E3F2FD; border-color: #90CAF9; color: #0D47A1;"><i class="fa-solid fa-bus"></i> 乙車司機</span>
                     </div>
@@ -1395,11 +1584,11 @@
                 <div class="dining-card">
                     <div class="dining-card-header">
                         <h3><i class="fa-solid fa-fire"></i> 桌號 A1</h3>
-                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">保留位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">黃欽光</span>
-                        <span class="dining-tag">彭貴圓</span>
+                        <span class="dining-tag">保留席</span>
+                        <span class="dining-tag">保留席</span>
                     </div>
                 </div>
 
@@ -1410,10 +1599,10 @@
                         <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">彭瑞圓</span>
+                        <span class="dining-tag">黃欽光</span>
+                        <span class="dining-tag">彭貴圓</span>
                         <span class="dining-tag">葉清湧</span>
-                        <span class="dining-tag">葉庭瑋</span>
-                        <span class="dining-tag">呂蕙如</span>
+                        <span class="dining-tag">彭瑞圓</span>
                     </div>
                 </div>
 
@@ -1435,15 +1624,14 @@
                 <div class="dining-card">
                     <div class="dining-card-header">
                         <h3><i class="fa-solid fa-fire"></i> 桌號 A4</h3>
-                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">6位</span>
+                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">5位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">林佳雯</span>
-                        <span class="dining-tag">彭子芸</span>
-                        <span class="dining-tag">彭宥逵</span>
                         <span class="dining-tag">彭惠媛</span>
                         <span class="dining-tag">林朝棟</span>
                         <span class="dining-tag">邱秋華</span>
+                        <span class="dining-tag">林彤</span>
+                        <span class="dining-tag">范氏海雲</span>
                     </div>
                 </div>
 
@@ -1451,13 +1639,12 @@
                 <div class="dining-card">
                     <div class="dining-card-header">
                         <h3><i class="fa-solid fa-fire"></i> 桌號 A5</h3>
-                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
+                        <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">彭雅君</span>
-                        <span class="dining-tag">廖瑨侑</span>
-                        <span class="dining-tag">廖瑨曈</span>
-                        <span class="dining-tag">廖瑨承</span>
+                        <span class="dining-tag">林佳雯</span>
+                        <span class="dining-tag">彭子芸</span>
+                        <span class="dining-tag">彭宥逵</span>
                     </div>
                 </div>
 
@@ -1468,12 +1655,12 @@
                         <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">6位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">陳佑楷</span>
-                        <span class="dining-tag">陳佑安</span>
+                        <span class="dining-tag">陳茂雄</span>
+                        <span class="dining-tag">黃菊坦</span>
+                        <span class="dining-tag">阮浩臺</span>
+                        <span class="dining-tag">陳瑞齡</span>
                         <span class="dining-tag">陳祥彬</span>
-                        <span class="dining-tag">黃菊金</span>
-                        <span class="dining-tag">張意貞</span>
-                        <span class="dining-tag">梁月圓</span>
+                        <span class="dining-tag">陳佑安</span>
                     </div>
                 </div>
 
@@ -1484,12 +1671,12 @@
                         <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">6位</span>
                     </div>
                     <div class="dining-members">
-                        <span class="dining-tag">黃菊滿</span>
-                        <span class="dining-tag">黃秀梅</span>
                         <span class="dining-tag">彭歆妤</span>
                         <span class="dining-tag">彭峻枰</span>
-                        <span class="dining-tag">林彤</span>
-                        <span class="dining-tag">范氏海雲</span>
+                        <span class="dining-tag">彭雅君</span>
+                        <span class="dining-tag">廖瑨侑</span>
+                        <span class="dining-tag">廖瑨曈</span>
+                        <span class="dining-tag">廖瑨承</span>
                     </div>
                 </div>
 
@@ -1510,11 +1697,330 @@
             </div>
         </div>
     </div>
+ <!-- Tab 6: 飯店房間分配表 -->
+    <div id="tab-rooms" class="tab-content">
+        <h2 class="section-title"><i class="fa-solid fa-hotel"></i> 樂億皇家渡假酒店 - 房間分配表</h2>
+        
+        <!-- 飯店與住宿基本資訊 -->
+        <div style="background: var(--card-bg); border: 2px solid var(--border-color); border-radius: 18px; padding: 20px; margin-bottom: 25px; box-shadow: var(--shadow-sm);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px dashed var(--border-color); padding-bottom: 12px; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-size: 20px; color: var(--primary-color); display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-building"></i> 樂億皇家渡假酒店
+                </h3>
+                <span style="background: var(--accent-orange); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 14px; font-weight: 700;">
+                    <i class="fa-solid fa-moon"></i> 連住兩晚 (8/23 - 8/25)
+                </span>
+            </div>
+            <p style="font-size: 15px; color: var(--text-dark); margin-bottom: 8px;">
+                <strong><i class="fa-solid fa-location-dot" style="color: var(--accent-orange);"></i> 飯店地址：</strong>嘉義市西區玉山路 501 號
+            </p>
+            <p style="font-size: 15px; color: var(--text-dark); margin-bottom: 10px;">
+                <strong><i class="fa-solid fa-phone" style="color: var(--primary-color);"></i> 連絡電話：</strong>05-283-0099
+            </p>
+            <div style="background: #FFFDF8; border: 1.5px solid #FFE0B2; padding: 12px 16px; border-radius: 12px; font-size: 14px; color: var(--text-muted);">
+                <i class="fa-solid fa-circle-exclamation" style="color: var(--accent-orange);"></i> <strong>入住提醒：</strong>因應政府環保減塑政策，飯店不提供牙刷、牙膏、刮鬍刀等一次性備品，請務必自備盥洗用具。
+            </div>
+        </div>
 
-    <!-- Tab 6: 貼心提醒 -->
+        <!-- 房型與房號分配列表 -->
+        <div class="dining-grid">
+            <!-- 房間 1 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3020(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃燈炎</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 劉秀鳳</span>
+                </div>
+            </div>
+ 
+            <!-- 房間 2 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A3026(三人房3床2晚) </h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃賴維妹</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃旭崇</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃詞苡</span>
+                </div>
+            </div>
+
+            <!-- 房間 3 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A3027(三人房3床2晚) </h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃麗生</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 鍾晴根</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 鍾晴宇</span>
+                </div>
+            </div>
+
+            <!-- 房間 4 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A5025(四人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃佑宜</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 王柏淵</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 王競煦</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 王競熙</span>
+                </div>
+            </div>
+
+            <!-- 房間 5 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i>A3021(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                     <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳茂雄</span>
+                     <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃菊坦</span>
+                </div>
+            </div>
+
+            <!-- 房間 6 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i>A7027(雙人房1床2晚)</h3>
+                    <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 阮浩臺</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳瑞齡</span>
+                </div>
+            </div>
+
+            <!-- 房間 7 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> B5001(三人房3床1晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 蔡獻樑*</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳瑞珍*</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 蔡依璇*</span>
+                </div>
+            </div>
+
+            <!-- 房間 8 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> B5025+A5028(換房)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳祥彬</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳佑楷</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 陳佑安*</span>
+                </div>
+            </div>
+
+            <!-- 房間 9 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3022(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃菊金</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 張意貞</span>
+                </div>
+            </div>
+
+            <!-- 房間 10 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3023(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 鍾裕達</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 林駿瑋</span>
+                      </div>
+            </div>
+
+            <!-- 房間 11 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A3008(三人房3床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃庫香</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 吳家朋</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 曾偉宸*</span>
+                </div>
+            </div>
+
+            <!-- 房間 12 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3018(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">1位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 吳桂瑩</span>
+               </div>
+            </div>
+
+            <!-- 房間 13 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A5026(四人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃菊滿</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃秀梅</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭歆妤</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭峻枰</span>
+                </div>
+            </div>
+
+            <!-- 房間 14 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A5027(四人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">5位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭厚才</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 向元玲</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 徐禮安</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 徐夏雲</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 徐夏霓</span>
+                </div>
+            </div>
+
+            <!-- 房間 15 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3030(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 廖賜寶</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭雅君</span>
+                </div>
+            </div>
+
+            <!-- 房間 16 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A3032(三人房3床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 廖瑨侑</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 廖瑨曈</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 廖瑨承</span>
+                </div>
+            </div>
+
+            <!-- 房間 17 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3025(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #D97353; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 黃欽光</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭貴圓</span>
+                </div>
+            </div>
+
+            <!-- 房間 18 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                     <h3><i class="fa-solid fa-bed"></i>  A3028(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭瑞圓</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 葉清湧</span>
+                </div>
+            </div>
+
+            <!-- 房間 19 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-bed"></i> A3029(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 葉庭瑋</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 呂蕙如</span>
+                </div>
+            </div>
+
+            <!-- 房間 20 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i>  A5030(四人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #4A6B53; color: #fff; padding: 2px 8px; border-radius: 10px;">4位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭為彬</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 謝佩芳</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭宣豪</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭苡豪</span>
+                </div>
+            </div>
+
+            <!-- 房間 21 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i> A3033(三人房3床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members"> 
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 林佳雯</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭子芸</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭宥逵</span>
+                </div>
+            </div>
+
+            <!-- 房間 22 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                    <h3><i class="fa-solid fa-people-roof"></i>  A3035(三人房3床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">3位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 彭惠媛</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 林朝棟</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 邱秋華</span>
+            </div>
+         </div>
+ <!-- 房間 23 -->
+            <div class="dining-card">
+                <div class="dining-card-header">
+                     <h3><i class="fa-solid fa-bed"></i> A3031(雙人房2床2晚)</h3>
+                    <span style="font-size: 12px; background: #E6A15C; color: #fff; padding: 2px 8px; border-radius: 10px;">2位</span>
+                </div>
+                <div class="dining-members">
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 林    彤</span>
+                    <span class="dining-tag"><i class="fa-solid fa-user"></i> 范氏海雲</span>
+                </div>
+            </div>
+    </div>
+    
+    <!-- Tab 8: 貼心提醒 -->
     <div id="tab-notices" class="tab-content">
         <h2 class="section-title"><i class="fa-solid fa-bell"></i> 行前與旅途貼心提醒</h2>
-        <ul class="notice-list">
+        <div class="notice-list">
+
             <li class="notice-item" style="border: 2px solid #D97353; background: #FFFDFB;">
                 <div class="notice-icon" style="background: #FFEBE5; color: #D97353;"><i class="fa-solid fa-pump-soap"></i></div>
                 <div class="notice-content">
@@ -1540,18 +2046,10 @@
             </li>
 
             <li class="notice-item">
-                <div class="notice-icon"><i class="fa-solid fa-clock"></i></div>
-                <div class="notice-content">
-                    <h4>阿里山小火車時間</h4>
-                    <p>第二天阿里山健行最後將於神木站搭乘高山小火車，預計最晚 14:00 發車，請大家隨團領隊行動並注意乘車時間。</p>
-                </div>
-            </li>
-
-            <li class="notice-item">
                 <div class="notice-icon"><i class="fa-solid fa-pills"></i></div>
                 <div class="notice-content">
                     <h4>個人藥品與隨身物品</h4>
-                    <p>請攜帶健保卡、個人習慣用藥（暈車藥、腸胃藥、防蚊液等）、保溫瓶及雨具。如有特殊飲食需求請提前告知導遊。</p>
+                    <p>請務必攜帶身分證/健保卡/優惠票證件、個人習慣用藥（暈車藥、腸胃藥、防蚊液等）、保溫瓶及雨具。如有特殊飲食需求請提前告知導遊。</p>
                 </div>
             </li>
 
@@ -1559,7 +2057,7 @@
                 <div class="notice-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <div class="notice-content">
                     <h4>行程彈性調整</h4>
-                    <p>以上行程時間順序及停留時間將依照當天實際車流、天候等狀況適度微調，請大家快樂配合見諒！</p>
+                    <p>以上行程時間順序及停留時間將依照當天實際車流、天候等狀況適度微調，敬請見諒！</p>
                 </div>
             </li>
         </ul>
